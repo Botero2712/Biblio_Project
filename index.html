@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca digital</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <h1>Biblioteca digital</h1>
+  <nav>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <button id="Home" class="active">Home</button>
+      <button id="Books">Seccion de libros</button>
+      <button id="Authors">Seccion de autores</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" style="text-align: center; margin-bottom: 20px;">
+      <h2>Bienvenido a la biblioteca digital</h2>
+      <p>Explora nuestra colección de libros y descubre una amplia variedad de literatura.</p>
+      <p>Tienes 3 botones para navegar en la biblioteca:</p>
+        <p>1. El boton "Home" te lleva a este mismo sitio con este mismo mensaje.</p>
+        <p>2. El boton "Seccion de libros" te lleva a la seccion de libros.</p>
+        <p>3. El boton "Seccion de autores" te lleva a la seccion de autores.</p>
+      <p>En la seccion de libros o autores puedes hacer las siguientes acciones: crear, editar, consultar y eliminar.</p>
+      <p>Puedes buscar libros por ISBN y autores por su nombre.</p>
+      <h2>Acerca de la pagina web</h2>
+      <p>La pagina web fue diseñada para concluir el proyecto del Bootcamp de "Desarrollo Web Full Stack: Nivel Basico" en MinTIC.</p>
+      <p><strong><font color="red">Nombre del estudiante:</font></strong> Juan Esteban Botero Rodriguez.</p>
+      <p><strong><font color="red">Profesores:</font></strong> Ricardo Garzon y Juliana Franco.</strong></p>
+    </section>
+
+    <section id="books">
+      <h2>Seccion de libros</h2>
+      <button id="loadBooks">Cargar los libros</button>
+      <button id="DeleteBook">Borrar Libro</button>
+  
+      <div>
+        <input type="text" id="bookId" placeholder="ISBN">
+        <button id="loadBook"> Cargar Libro</button>
+      </div>
+
+      <p></p>
+      <form id="addBook">
+        <input type="text" id="isbn" placeholder="ISBN" required>
+        <input type="text" id="titulo" placeholder="Título" required>
+        <input type="text" id="fechEdicion" placeholder="Fecha de edicion (dd/mm/aaaa)" required>
+        <input type="number" id="numPaginas" placeholder="Número de Páginas" required>
+        <input type="number" id="cantEjemplares" placeholder="Ejemplares" required>
+        <input type="number" id="cantEjemplaresDisponibles" placeholder="Ejemplares Disponibles" required>
+        <input type="text" id="sinopsis" placeholder="Sinopsis" required>
+        <input type="text" id="tipoPresentacion" placeholder="Presentación" required>
+        <input type="text" id="tipoLiteratura" placeholder="Literatura" required>
+        <input type="text" id="autorNombre" placeholder="Nombre del Autor" required>
+        <input type="text" id="autorApellidos" placeholder="Apellidos del Autor" required>
+        <input type="text" id="autorFechPub" placeholder="Fecha Publicación Autor (dd/mm/aaaa)" required>
+        <input type="text" id="premios" placeholder="Premios (separados por coma)">
+        <input type="text" id="autorFecFall" placeholder="Fecha de Fallecimiento (dd/mm/aaaa)">
+        <button type="submit">Añadir Libro</button>
+        <button type="text" id="modifyBook">Editar Libro</button>
+      </form>
+      <p></p>
+      <div id="outputlibros"></div>
+    </section>
+
+    <section id="authors">
+      <h2>Seccion de autores</h2>
+      <button id="loadAuthors">Cargar los autores</button>
+      <button id="DeleteAuthor">Borrar autor</button>
+  
+      <div>
+        <input type="text" id="authorNombre" placeholder="Nombre del autor">
+        <input type="text" id="authorApellido" placeholder="Apellidos del autor">
+        <button id="loadAuthor">Autor</button>
+      </div>
+
+      <p></p>
+      <form id="addAuthor">
+        <input type="text"id= "autorNombre_2" placeholder="Nombre del Autor" required>
+        <input type="text" id="autorApellidos_2" placeholder="Apellidos del Autor" required>
+        <input type="text" id="autorFechPub_2" placeholder="Fecha Publicación Autor (dd/mm/aaaa)">
+        <input type="text" id="premios_2" placeholder="Premios (separados por coma)">
+        <input type="text" id="autorFecFall_2" placeholder="Fecha de Fallecimiento">
+        <button type="submit">Añadir Autor</button>
+        <button type="text" id="modifyAuthor">Editar Autor</button>
+      </form>
+      <p></p>
+      <div id="output"></div>
+  </main>
+
+  <script type="text/javascript" src="libro.js"></script>
+</body>
+</html>
